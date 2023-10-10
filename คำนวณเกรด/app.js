@@ -1,6 +1,6 @@
-let name = prompt("โย่วๆ ชื่อไรอ่ะเรา")
+let name = prompt("กรอกชื่อของคุณ")
     document.getElementById("name").innerHTML = (`คุณ ${name}`)
-let score = prompt("อ่ะ ได้คะแนนเท่าไหร่อ่ะ")
+let score = prompt("กรอกคะแนนของคุณ")
 if (score >= 80) {
     document.getElementById("grade").innerHTML = "A"
 } else if (score >= 70) {
