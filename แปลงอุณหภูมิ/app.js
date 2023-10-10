@@ -1,23 +1,20 @@
-let toCelsius = () => {
-    let fahrenheit = prompt("Fahrenheit : ")
+let toCelsius = (fahrenheit) => {
     let value = (fahrenheit -32) *5 /9
-    document.getElementById("result").innerHTML = value.toFixed(2) + "°C"
+    return value.toFixed(2) + "°C"
 }
 
-let toFaharenheit = ()=> {
-    let celsius = prompt("Celsius : ")
-    let value = (celsius * 1.8) +32 
-    document.getElementById("result").innerHTML = value.toFixed(2) + "°F"
+let display = (elementId, value) => {
+    document.getElementById(elementId).innerHTML = "<b>" + value + "</b>";
 }
 
-let userChoice = () => {
-    let choice = prompt("What You want to convert F to C Press \"F\" if C to F Press Anything")
-    if(choice === "F"){
-        document.getElementById("head").innerHTML = "Fahrenheit to Celsius"
-        toCelsius()
-    } else{
-        document.getElementById("head").innerHTML = "Celsius to Fahrenheit"
-        toFaharenheit()
-    }
+let toFaharenheit = (celsius)=> {
+    let value = (celsius * 9) /5+32 
+    return value.toFixed(2) + "°F"
 }
-userChoice()
+
+let toCelsiusProgram = (value) => {
+    alert(toCelsius(value))
+}
+let toFaharenheitProgram = (value) => {
+    alert(toFaharenheit(value))
+}
